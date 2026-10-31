@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --whatsapp-dark: #111b21;
+  --whatsapp-panel: #202c33;
+  --whatsapp-bg: #efeae2;
+  --whatsapp-green: #00a884;
+  --whatsapp-teal: #008069;
+  --whatsapp-sent: #d9fdd3;
+  --whatsapp-bubble: #f0f2f5;
+  --whatsapp-muted: #8696a0;
+  --whatsapp-danger: #f15c6d;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: var(--whatsapp-dark);
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.08), transparent 30%);
+}
+
+.whatsapp-pattern {
+  background-color: #efeae2;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d9d9d9' fill-opacity='0.13'%3E%3Cpath d='M0 40a40 40 0 0 1 80 0v40H0V40zm40-40a40 40 0 0 1 40 40H40V0zm0 40H0a40 40 0 0 1 80 0H40z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+}
